@@ -1,0 +1,7 @@
+<!--pages/registersuccess/registersuccess.wxml-->
+<view class='enrol'>
+  <image src='../images/crm-1-enrol.png'></image>
+</view>
+<view class='rcode'>
+
+</view>

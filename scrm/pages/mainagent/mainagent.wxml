@@ -1,0 +1,28 @@
+<!--pages/mainagent/mainagent.wxml-->
+<view id="header">
+  <view id="header_content">
+    <view id="header_content_left">
+    <view class="left_text">您好，15936072797</view>
+    <view class="left_text">欢迎使用英胜CRM系统</view>
+    </view>
+    <view id="header_content_right">
+       <image src='../images/英胜logo@2x.png' style='width:100%;height:100%;'></image> 
+    </view>
+  </view>
+</view>
+<view id="content">
+  <view id="content_body">
+    <view id="body_left">
+      <view id="agent">
+         <image src='../images/申请代理活动@2x.png' style='width:100%;height:100%;'></image> 
+      </view>
+      <view id="agent_text">申请代理活动</view>
+    </view>
+    <view id="body_right">
+      <view id="historyagent">
+         <image src='../images/查看已代理活动@2x.png' style='width:100%;height:100%;'></image> 
+      </view>
+      <view id="historyagent_text">查看已代理活动</view>
+    </view>
+  </view>
+</view>

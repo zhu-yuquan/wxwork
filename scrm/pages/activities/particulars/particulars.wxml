@@ -1,0 +1,9 @@
+<import src="../../template/image.wxml"/>
+<view class="particulars_mask"></view>
+<view class='particulars'>
+  <template is="particulars"></template>
+  <!-- 关闭 -->
+  <view bindtap='particularsStatus' class='particulars_colse'>
+    <template is="fork"></template>
+  </view>
+</view>

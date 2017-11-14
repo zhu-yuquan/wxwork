@@ -1,0 +1,5 @@
+<!--pages/error/error.wxml-->
+<import src="../template/image.wxml"/>
+<view class='error'>
+  <template is="error"></template>
+</view>

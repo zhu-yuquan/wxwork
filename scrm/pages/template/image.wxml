@@ -1,0 +1,64 @@
+<!-- 关闭 -->
+<template name="fork">
+  <image src='http://10.0.18.13:8080/scrm/images/fork.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 白关闭 -->
+<template name="fork1">
+  <image src='http://10.0.18.13:8080/scrm/images/椭圆2@2x.png' style='width:100%;height:100%;'></image>
+</template>
+
+<!-- 分享 -->
+<template name="share">
+  <image src='http://10.0.18.13:8080/scrm/images/分享与代理1@2x.png' style='width:100%;height:99%;'></image>
+</template>
+<!-- 查看详情 -->
+<template name="particulars">
+  <image src='http://10.0.18.13:8080/scrm/images/detail.png' style='width:100%;height:100%;border-radius: 15px;'></image>
+</template>
+<!-- 钩 -->
+<template name="hook">
+  <image src='http://10.0.18.13:8080/scrm/images/hook.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 加 -->
+<template name="add">
+  <image src='http://10.0.18.13:8080/scrm/images/1111@2x.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 公司logo -->
+<template name="logo">
+  <image src='http://10.0.18.13:8080/scrm/images/英胜logo@2x.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 管理员 -->
+<template name="warden1">
+  <image src='http://10.0.18.13:8080/scrm/images/管理员@2x.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 管理员 -->
+<template name="warden2">
+  <image src='http://10.0.18.13:8080/scrm/images/矢量智能对象@2x.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 手机号 -->
+<template name="outline">
+  <image src='http://10.0.18.13:8080/scrm/images/user-outline-2x.png' style='width:100%;height:100%;'></image>
+</template>
+<!-- 验证码 -->
+<template name="lock">
+  <image src='http://10.0.18.13:8080/scrm/images/closed-lock-2x.png' style='width:100%;height:100%;'></image>
+</template>
+
+<!-- 手机 -->
+<template name="illustration">
+  <image src='http://10.0.18.13:8080/scrm/images/illustration-2x.png' style='width:100%;height:100%;'></image>
+</template>
+
+<!-- 代理人 -->
+<template name="agent1">
+  <image src='http://10.0.18.13:8080/scrm/images/申请代理活动@2x.png' style='width:100%;height:100%;'></image> 
+</template>
+<!-- 代理人 -->
+<template name="agent2">
+  <image src='http://10.0.18.13:8080/scrm/images/查看已代理活动@2x.png' style='width:100%;height:100%;'></image>
+</template>
+
+<!-- 失败 -->
+<template name="error">
+  <image src='http://10.0.18.13:8080/scrm/images/login_shibai.png' style='width:100%;height:99%;padding:0;margin: 0;'></image>
+</template>

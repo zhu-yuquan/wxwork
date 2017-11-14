@@ -1,0 +1,31 @@
+<!-- pages/admin/attence/attence.wxml -->
+<!-- 遮罩 -->
+<view class='attence_mask'></view>
+<view class='attence'>
+  <!-- 关闭按钮 -->
+  <view id="0" class='attence_off' bindtap='attenceStatus'>
+    <import src="../../template/image.wxml"/>
+    <template is="fork1"></template>
+  </view>
+  <!-- 点击状态 -->
+  <view class='attence_top'>
+    <view id='0' class='attence_status' bindtap='attenceAllDay' style='{{attenceAllDay == 0 ? "color: #0080FF;": ""}}'>
+      当天学生考勤
+    </view>
+    <view id='1' class='attence_status' bindtap='attenceAllDay' style='{{attenceAllDay == 1 ? "color: #0080FF;": ""}};border-left: 2px solid #cccccc;'>
+      全部学生考勤
+    </view>
+  </view>
+  <!-- 提示 -->
+  <view class='attence_medium'>
+    <text class='attence_medium_left'>学生</text>
+    <text class='attence_medium_right'>考勤状况</text>
+  </view>
+  <!-- 滑动 -->
+  <scroll-view scroll-y="true" class='attence_scroll'>
+    <view class='attence_scroll_view' wx:for="{{attenceData}}">
+      <text class='attence_scroll_left'>{{item.name}}</text>
+      <text class='attence_scroll_right' style='color:#ffd11a'>{{item.signend == null ? '缺勤' : '全勤'}}</text>
+    </view>
+  </scroll-view>
+</view>

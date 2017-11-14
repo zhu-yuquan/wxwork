@@ -1,0 +1,47 @@
+<!--pages/main/main.wxml-->
+<import src="../template/image.wxml"/>
+<view id="header">
+  <view id="header_content">
+    <view id="header_content_left">
+    <view class="left_text">您好，{{user.name}}</view>
+    <view class="left_text">欢迎使用英胜CRM系统</view>
+    </view>
+    <view id="header_content_right">
+        <template is="logo"></template>
+    </view>
+  </view>
+</view>
+<view id="content">
+  <view id="content_body">
+    <!-- 管理员 -->
+    <bolck wx:if="{{user.status == 4}}">
+      <navigator id="body_left" url='../admin/admin'>
+        <view id="agent">
+            <template is="warden1"></template>
+        </view>
+        <view id="agent_text">管理员入口</view>
+      </navigator>
+      <view id="body_right">
+        <view id="historyagent">
+            <template is="warden2"></template>
+        </view>
+        <view id="historyagent_text">敬请期待</view>
+      </view>
+    </bolck>
+    <!-- 代理人 -->
+    <bolck wx:if="{{user.status == 1}}">
+      <navigator id="body_left" url='../activities/activities'>
+        <view id="agent">
+            <template is="agent1"></template>
+        </view>
+        <view id="agent_text">申请代理活动</view>
+      </navigator>
+      <navigator id="body_right" url='../historicalEvents/historicalEvents'>
+        <view id="image">
+            <template is="agent2"></template>
+        </view>
+        <view id="image_text">查看已代理活动</view>
+      </navigator>
+    </bolck>
+  </view>
+</view>

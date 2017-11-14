@@ -1,0 +1,34 @@
+<!--pages/activate/activate.wxml-->
+<import src="../template/image.wxml"/>
+<view class='header'>
+  <view class='content'>
+    <view class='c_head'>
+      手机号激活
+    </view>
+    <view class='c_tel'>
+      <view class='c_tel_img'>
+        <template is="outline"></template>
+      </view>
+      <view class='c_tel_input'>
+        <input bindinput="tel" type='text' name="tel" maxlength='11' style='height:100%;'></input>
+      </view>
+    </view>
+    <view class='c_code'>
+      <view class='c_code_img'>
+        <template is="lock"></template>
+      </view>
+      <view class='c_code_input'>
+        <input bindinput="code" type='password' name="code" maxlength='4' style='height:100%;'></input>
+      </view>
+      <view data-tel='{{tel}}' class='c_code_text' bindtap='validation'>
+        点击获取验证码
+      </view>
+    </view>
+    <view bindtap='submit' data-tel='{{tel}}' data-code='{{code}}'  class='c_btn'>
+      激活
+    </view>
+  </view>
+</view>
+<view class='t_img'>
+  <template is="illustration"></template>
+</view>

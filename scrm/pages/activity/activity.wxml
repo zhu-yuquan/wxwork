@@ -1,0 +1,35 @@
+<!--pages/activity/activity.wxml-->
+<view class="content">
+  <view class='header'>活动内容</view>
+  <view class='header_content'>
+    一个邮箱账号只能申请一个小程序，如果想开发多个小程序怎么办？
+    微信官方说明：除个体工商户类型可认证5个小程序外，其他类型一个
+    主体可认证50个小程序。也就是说，如果你是企业主体，你可以弄50个
+    邮箱，申请50个账号，开发50个小程
+  </view>
+</view>
+<view class="content1">
+  <view class='header'>活动规则</view>
+  <view class='header_content'>
+    <text>活动时间：\n</text>
+    <text>活动地点：</text>
+  </view>
+</view>
+<view class="activity_photo">
+  <view class='header'>活动照片</view>
+  <view class='camera'>
+   <view class="photo">
+    <!-- <image src='../images/404.png' style='width:100%;height:100%;'></image> -->
+   </view>
+   <view class="photo"></view>
+   <view class="photo"></view>
+   <view class="photo"></view>
+  </view>
+  <view class='qcode'>
+    <!--管理员二维码显示位置  -->
+    <image src='../images/404.png' style='width:100%;height:100%;'></image>
+  </view>
+  <view class='point'>请添加管理员微信号,及时获取最新信息</view>
+  <view class='enlist'>我要报名</view>
+</view>
+

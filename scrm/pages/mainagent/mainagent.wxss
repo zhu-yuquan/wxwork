@@ -1,0 +1,96 @@
+/* pages/mainagent/mainagent.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+#header{
+  top:0%;
+  height: 25%;
+  width: 100%;
+  background-color: #1358B5;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+#header_content{
+  position: relative;
+  top: 13%;
+  margin-left: 8%;
+  width: 84%;
+  height: 62%;
+}
+#header_content_left{
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+.left_text{
+  margin: 6% 0;
+  color: white;
+}
+#header_content_right{
+  float: right;
+  width: 30%;
+  height: 100%;
+}
+#content{
+  position: relative;
+  height: 75%;
+  width: 100%;
+}
+#content_body{
+  position: relative;
+  top:30%;
+  left:5%;
+  width: 90%;
+  height: 35%;
+}
+#body_left{
+  float: left;
+  width:47.5%;
+  height: 100%;
+  background: black;
+  background-color: white;
+  border-radius: 5px;
+}
+#agent{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  top: 10%;
+  left: 25%;
+}
+#agent_text{
+  position: relative;
+  width: 82%;
+  height: 20%;
+  top: 15%;
+  left: 9%;
+  text-align: center;
+  color: #565656;
+}
+#body_right{
+  float: right;
+  width:47.5%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+#historyagent{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  top: 10%;
+  left: 25%;
+}
+#historyagent_text{
+  position: relative;
+  width: 82%;
+  height: 20%;
+  top: 15%;
+  left: 9%;
+  text-align: center;
+  color: #565656;
+}

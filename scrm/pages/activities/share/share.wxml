@@ -1,0 +1,6 @@
+<import src="../../template/image.wxml"/>
+<view class='share_mask'></view>
+<view class='share_img' bindtap='shareStatus'>
+  <template is="share"></template>
+</view>
+

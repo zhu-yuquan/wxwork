@@ -1,0 +1,55 @@
+<!--pages/student_register/student_register.wxml-->
+<view class="header">
+  学生注册信息
+</view>
+<view >
+</view>
+<form bindsubmit='formSubmit'>
+  <view class='detail'>
+    <view class='detail_img'>
+       <image src='../images/name-2x.png'></image> 
+    </view>
+    <view class='detail_text'>
+     <text>姓名：</text> 
+    </view>
+    <view class='detail_input'>
+     <input name="text" class="input_text" name='stuname' maxlength='8'></input> 
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='detail_img'>
+       <image src='../images/school-2x.png'></image> 
+    </view>
+    <view class='detail_text'>
+     <text>学校：</text> 
+    </view>
+    <view class='detail_input'>
+     <input name="text" class="input_text" name='school' maxlength='12'></input> 
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='detail_img'>
+       <image src='../images/telephone-2x.png'></image> 
+    </view>
+    <view class='detail_text'>
+     <text>手机号：</text> 
+    </view>
+    <view class='detail_input'>
+     <input name="number" class="input_text" name='telephone' maxlength='11'></input> 
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='detail_img'>
+       <image src='../images/age-2x.png'></image> 
+    </view>
+    <view class='detail_text'>
+     <text>年龄：</text> 
+    </view>
+    <view class='detail_input'>
+     <input name="text" class="input_text" name='age' maxlength='3' height="100%"></input> 
+    </view>
+  </view>
+  <view class="btn">
+    注册
+  </view>
+</form>

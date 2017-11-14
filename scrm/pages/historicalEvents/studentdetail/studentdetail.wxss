@@ -1,0 +1,71 @@
+/* pages/historicalEvents/studentdetail/studentdetail.wxss */
+page{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+.top{
+  width: 100%;
+  height: 40px;
+  color: #787878;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 calc(4% + (92% * 0.02));
+}
+.center{
+  width: 100%;
+  height: 50%;
+  background: white;
+}
+.attence_scroll_view{
+  border-bottom: 1px solid #cccccc;
+  height: 21px;
+  padding: 7px 0;
+  font-size: 14px;
+  width: 92%;
+  margin: 0 auto;
+}
+.center_scroll{
+  width: 96%;
+  margin: 0 auto
+}
+.attence_scroll_left{
+  float: left;
+  color: #555555;
+}
+.attence_scroll_right{
+  float: right;
+  color: #555555;
+}
+.center_attence{
+  width: 96%;
+  margin: 0 auto;
+  color: #555555;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom{
+  width: 100%;
+  height: calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttom{
+  width: 80%;
+  height: 20%;
+  background: #006cf8;
+  border-radius: 10% / 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttom text{
+  color: #ffffff;
+  font-weight: 560;
+}

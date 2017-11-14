@@ -1,0 +1,99 @@
+/* pages/activate/activate.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header{
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+.content{
+  width: 80%;
+  margin-left: 10%;
+  height: 100%;
+}
+.c_head{
+  width: 100%;
+  height: 20%;
+  margin-bottom: 5%;
+  color: #333333;
+  line-height: 300%; 
+}
+.c_tel{
+  width: 100%;
+  height: 20%;
+  margin-bottom: 5%;
+  border-bottom: 2px #ccc solid;
+}
+.c_tel_img{
+  position: relative;
+  float: left;
+  top: 20%;
+  width: 12%;
+  height: 60%;
+}
+.c_tel_input{
+  position: relative;
+  float: left;
+  top: 20%;
+  left: 5%;
+  width: 83%;
+  height: 60%;
+  font-size: 1.9rem;
+  color: #333333;
+}
+.c_code{
+  width: 100%;
+  height: 20%;
+  margin-bottom: 5%;
+  border-bottom: 2px #ccc solid;
+}
+.c_code_img{
+  position: relative;
+  float: left;
+  top: 20%;
+  width: 12%;
+  height: 60%;
+}
+.c_code_input{
+  position: relative;
+  float: left;
+  top: 20%;
+  left: 5%;
+  width: 40%;
+  height: 60%;
+  font-size: 1.9rem;
+  color: #333333;
+}
+.c_code_text{
+  position: relative;
+  float: left;
+  top: 20%;
+  width: 48%;
+  height: 60%;
+  line-height: 200%;
+  color: #006fc8;
+  text-align: right;
+}
+.c_btn{
+  width: 100%;
+  height: 20%;
+  background: #006fc8;
+  margin-bottom: 5%;
+  text-align: center;
+  line-height: 300%;
+  color: #ffffff;
+  border-radius: 35px;
+}
+.t_img{
+  position: relative;
+  height: 49%;
+  width: 100%;
+}
+image{
+  width: 100%;
+  height: 100%;
+}

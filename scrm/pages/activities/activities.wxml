@@ -1,0 +1,51 @@
+<!--pages/activities/activities.wxml-->
+<view class='head1'></view>
+<view class='head'>
+</view>
+<view class='slippage'>
+  <scroll-view scroll-y="true" class='slippage_view'>
+    <block wx:if="{{activity.length == 0}}">
+      <view>没有活动</view>
+    </block>
+    <block wx:if="{{activity.length != 0}}">
+      <!-- 循环区 -->
+      <view id='{{item.id}}' wx:for="{{activity}}" class='slippage_view_view'>
+          <!-- 图片数据 -->
+        <view style='width:100%;height:60%;display: flex;align-items:flex-end;'>
+          <!-- 图片 -->
+          <view class='slippage_parallel_view1'>
+            <image src='{{item.img}}' style='width:100%;height:100%'></image>
+          </view>
+          <!-- 数据 -->
+          <view class='slippage_parallel_view2'>
+            <text class='slippage_parallel_view2_text1'>{{item.name}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动时间:{{item.start}}～{{item.end}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动内容:{{item.content}}</text>
+          </view>
+        </view>
+        <!-- 拍照 -->
+        <view class='slippage_pictures_view'>
+          <view class='slippage_pictures_view_text'>
+            ￥<text class='slippage_pictures_view_text1'>{{item.price}}</text>
+          </view>
+          
+        </view>
+        <!-- 各种按钮 -->
+        <view class='slippage_pictures_buttom'>
+          <view id="{{item.id}}" class='slippage_pictures_buttom_view' bindtap='particularsStatus'>查看详情</view>
+          <view id="{{item.id}}" bindtap='shareStatus' class='slippage_pictures_buttom_view' style='border-left:1px solid #cccccc;border-right: 1px solid #cccccc;'>分享与代理</view>
+          <view id="{{item.id}}"data-name="{{item.name}}" bindtap='qrcodeStatus' class='slippage_pictures_buttom_view'>申请代理</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 分享与代理 -->
+ <block wx:if="{{shareStatus}}"> 
+  <include src="./share/share.wxml"/>
+ </block> 
+ <!-- 分享与代理 -->
+ <block wx:if="{{particularsStatus}}">   
+  <include src="./particulars/particulars.wxml"/>
+  </block>  
+

@@ -1,0 +1,21 @@
+<!--pages/admin/screening/screening.wxml-->
+<!-- 遮罩 -->
+<view class='mask'></view>
+<!-- 筛选 -->
+<view class='mask_screening'>
+    <view class='screening_title_screen'>状态</view>
+    <view class='screening_mask_top'>
+      <view id="0" bindtap='screeningBigScreen' class='{{screeningBigScreen == 0 ? "screening_button_big_screen" : "screening_big_screen"}}' >未开始</view>
+      <view id="1" bindtap='screeningBigScreen' class='{{screeningBigScreen == 1 ? "screening_button_big_screen" : "screening_big_screen"}}'>正在进行</view>
+      <view id="2" bindtap='screeningBigScreen' class='{{screeningBigScreen == 2 ? "screening_button_big_screen" : "screening_big_screen"}}'>已结束</view>
+    </view>
+    <view class='screening_title_screen'>时间</view>
+    <view class='screening_mask_top'>
+      <view id="0" bindtap='screeningSmallScreen' class='{{screeningSmallScreen == 0 ? "screening_button_small_screen" : "screening_small_screen"}}'>当天</view>
+      <view id="1" bindtap='screeningSmallScreen' class='{{screeningSmallScreen == 1 ? "screening_button_small_screen" : "screening_small_screen"}}'>全部</view>
+    </view>
+    <view class='screening_mask_top'>
+      <view bindtap='screeningResetting' class='screening_big_screen' style='width: 43%;margin: 0 3.5%;'>重置</view>
+      <view data-bigScreen="{{screeningBigScreen}}" data-smallScreen="{{screeningSmallScreen}}" bindtap='screeningSubmit' class='screening_big_screen' style='width: 43%;margin: 0 3.5%;background:#285cab;color:#fff;border: 1px solid #285cab;'>确定</view>
+    </view>
+</view>

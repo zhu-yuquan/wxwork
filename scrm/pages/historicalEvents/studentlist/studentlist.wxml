@@ -1,0 +1,52 @@
+<!--pages/historicalEvents/studentlist/studentlist.wxml-->
+<view class='timeIndex' wx:if="{{timeIndex}}"></view>
+<view class='top1'></view>
+<view class='top'>
+  <view class='top_view'>
+    <view class='top_center'>
+      <text class='top_center_title'>活动结算状态</text>
+      <text class='top_center_status'>{{agent.status == 1 ? '已结算' : '未结算'}}</text>
+      <text wx:if="{{agent.status == 1}}" class='top_center_time'>(结算日期:{{agent.sdate}})</text>
+    </view>
+  </view>
+  <view class='top_view'>
+    <view class='top_center'>
+      <text class='top_center_title'>活动实际收入</text>
+      <text class='top_center_status'>{{sumPrice}}元</text>
+      <text class='top_center_time'>(预计收入:{{sumPrice}}元)</text>
+    </view>
+  </view>
+</view>
+<view class='center'>
+  <view class='center_view'>
+    <text class='center_text1' style='color: #006fc8;'>{{map.length}}</text>
+    <text class='center_text2'>报名人数</text>
+  </view>
+  <view class='center_center'>
+    <text class='center_text1' style='color: #ff6610;'>{{map.length - index}}</text>
+    <text class='center_text2'>缺勤人数</text>
+  </view>
+  <view class='center_view'>
+    <text class='center_text1' style='color: #00EE00;'>{{index}}</text>
+    <text class='center_text2'>全勤人数</text>
+  </view>
+</view>
+<view class='bottom'>
+  <!-- 提示 -->
+  <view class='attence_medium'>
+    <text decode="true" class='attence_medium_left'>&nbsp;&nbsp;学生列表</text>
+  </view>
+  <!-- 滑动 -->
+  <scroll-view scroll-y="true" class='attence_scroll'>
+    <view bindtap='studentdetail' class='attence_scroll_view' wx:for="{{map}}" data-code='{{item.user.id}}' data-status='{{item.signUp.status}}'>
+      <text class='attence_scroll_left'>{{item.user.name}}</text>
+      <text class='attence_scroll_right'>
+        <text style='color: #555555;'>考勤状况:</text>
+        <text style='{{item.signUp.status == "已全勤" ? "color: #00EE00" : "color: #ff6610"}}'>{{item.signUp.status}}</text>
+      </text>
+    </view>
+  </scroll-view>
+</view>
+ <!-- -moz-border-radius: 100px / 50px; 
+    -webkit-border-radius: 200px / 150px; 
+    border-radius: 410px / 100px;  -->

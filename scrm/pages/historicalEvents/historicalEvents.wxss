@@ -1,0 +1,136 @@
+/* pages/historicalEvents/historicalEvents.wxss */
+@import '../admin/qrcode/qrcode.wxss';
+@import '../activities/share/share.wxss';
+@import '../activities/particulars/particulars.wxss';
+/*页面  */
+page{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2;
+}
+.timeIndex{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+/*头  */
+.head{
+  background: #1358B5;
+  width:100%;
+  height: 22%;
+  border-radius: 100% / 30%;
+}
+
+.head_view{
+  height: 43px;
+  width:100%;
+  background: #004B97;
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+}
+.head_view_view{
+  width:90%;
+  margin: 0 auto;
+  height: 23px;
+  font-size: 17px;
+}
+.head_view_view_left{
+  float: left;
+  opacity: 0.7;
+}
+.head_view_view_center{
+  margin: 0 0 0 calc((100% - 16px * 9) / 2);
+}
+.head_view_view_right{
+  float: right;
+  opacity: 0.7;
+}
+
+/*滑动区  */
+.slippage{
+  height:87%;
+  width: 100%;
+  position: absolute;
+  /* background: red; */
+  bottom: 0;
+}
+.slippage_view{
+  width: 85%;
+  height: 100%;
+  /* background: yellow; */
+  margin: 0 auto;
+}
+.slippage_view_view{
+  height: 161px;
+  background: white;
+  margin: 0 0 5px 0;
+  border-radius: 5px;
+}
+/*滑动平行  */
+.slippage_parallel_view1{
+  height: 80%;
+  width:27%;
+  margin: 0 3%;
+}
+.slippage_parallel_view2{
+  /* background: blue; */
+  height: 80%;
+  width: 64%;
+}
+.slippage_parallel_view2_text1{
+  font-size: 16px;
+  font-weight: bold;
+}
+.slippage_parallel_view2_text2{
+  font-size: 12px;
+  color: #989898;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+}
+.slippage_pictures_view{
+  display: flex;
+  align-items: center;
+  width:94%;
+  height: 20%;
+  margin: 0 auto;
+  /* border-bottom: 1px solid #cccccc; */
+}
+.slippage_pictures_img{
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 7px;
+}
+.slippage_pictures_view_text{
+  color: #ff6600;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.slippage_pictures_buttom{
+  display: flex;
+  align-items: center;
+  width:94%;
+  height: 20%;
+  margin: 0 auto;
+  color: #289cea;
+}
+.slippage_pictures_buttom_view{
+  font-size: 15px;
+  width: 33%;
+  text-align: center;
+}

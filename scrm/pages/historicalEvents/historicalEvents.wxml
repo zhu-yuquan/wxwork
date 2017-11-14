@@ -1,0 +1,65 @@
+<!--pages/historicalEvents/historicalEvents.wxml-->
+<!--pages/admin/admin.wxml-->
+<import src="../template/image.wxml"/>
+<view class='timeIndex' wx:if="{{timeIndex}}"></view>
+<!-- 提示 -->
+<view class='head'>
+  <view class='head_view'>
+    <view class='head_view_view'>
+      <text bindtap='upper' class='head_view_view_left'>上个月</text>
+      <text bindtap='now' class='head_view_view_center'>当前月</text>
+      <text bindtap='lower' class='head_view_view_right'>下个月</text>
+    </view>
+  </view><text style='height:30px;display:block;text-align:center;color:#fff;font-size:16px;margin:5px 0 0 0;'>本月预计收益{{activity[activity.length-1].pricesums}}元</text>
+</view>
+<!-- 滑动区域 -->
+<view class='slippage'>
+  <scroll-view scroll-y="true" class='slippage_view'>
+    <block wx:if="{{activity.length == 0}}">
+      <view>没有活动</view>
+    </block>
+    <block wx:if="{{activity.length != 0}}">
+      <!-- 循环区 -->
+      <view wx:if="{{activity.length-1 > index}}" wx:for="{{activity}}" class='slippage_view_view'>
+          <!-- 图片数据 -->
+        <view bindtap='studentlist' id='{{item.id}}' data-price="{{item.price}}"  style='width:100%;height:60%;display: flex;align-items:flex-end;'>
+          <!-- 图片 -->
+          <view class='slippage_parallel_view1'>
+            <image src='{{item.img}}' style='width:100%;height:100%'></image>
+          </view>
+          <!-- 数据 -->
+          <view class='slippage_parallel_view2'>
+            <text class='slippage_parallel_view2_text1'>{{item.name}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动时间:{{item.start}}～{{item.end}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动内容:{{item.content}}</text>
+          </view>
+        </view>
+        <!-- 拍照 -->
+        <view class='slippage_pictures_view'>
+          <view class='slippage_pictures_view_text'>
+            <text>￥{{item.price*item.suma}}元</text>
+            <text>{{item.price}}元/人</text>
+          </view>
+        </view>
+        <!-- 各种按钮 -->
+        <view class='slippage_pictures_buttom'>
+          <view id="1" class='slippage_pictures_buttom_view' bindtap='particularsStatus'>查看详情</view>
+          <view id='1' bindtap='shareStatus' class='slippage_pictures_buttom_view' style='border-left:1px solid #cccccc;border-right: 1px solid #cccccc;'>分享与代理</view>
+          <view id='{{item.id}}' data-u='"su"' bindtap='qrcodeStatus' class='slippage_pictures_buttom_view'>报名二维码</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 二维码 -->
+<block wx:if="{{qrcodeStatus}}">
+  <include src="../admin/qrcode/qrcode.wxml"/>
+</block>
+<!-- 分享与代理 -->
+ <block wx:if="{{shareStatus}}"> 
+  <include src="../activities/share/share.wxml"/>
+ </block> 
+ <!-- 分享与代理 -->
+ <block wx:if="{{particularsStatus}}">   
+  <include src="../activities/particulars/particulars.wxml"/>
+  </block>

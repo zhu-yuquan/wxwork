@@ -1,0 +1,68 @@
+<!--pages/admin/admin.wxml-->
+<import src="../template/image.wxml"/>
+<!-- 提示 -->
+<view class='head'>
+  <view class='head_view'>
+    <view class='head_view_view'>
+      状态:<text>{{screeningBigText}}/{{screeningSmallText}}</text>
+      <text id='{{screeningStatus == 1 ? 0 : 1}}' bindtap='screeningStatus' class='head_view_view_text2'>筛选▼</text>
+    </view>
+  </view>
+</view>
+<!-- 滑动区域 -->
+<view class='slippage'>
+  <scroll-view scroll-y="true" class='slippage_view'>
+    <block wx:if="{{activity.length == 0}}">
+      <view>没有活动</view>
+    </block>
+    <block wx:if="{{activity.length != 0}}">
+      <!-- 循环区 -->
+      <view id='{{item.id}}' wx:for="{{activity}}" class='slippage_view_view'>
+          <!-- 图片数据 -->
+        <view style='width:100%;height:60%;display: flex;align-items:flex-end;'>
+          <!-- 图片 -->
+          <view class='slippage_parallel_view1'>
+            <image src='{{item.img}}' style='width:100%;height:100%'></image>
+          </view>
+          <!-- 数据 -->
+          <view class='slippage_parallel_view2'>
+            <text class='slippage_parallel_view2_text1'>{{item.name}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动时间:{{item.start}}～{{item.end}}\n</text>
+            <text class='slippage_parallel_view2_text2'>活动内容:{{item.content}}</text>
+          </view>
+        </view>
+        <!-- 拍照 -->
+        <view class='slippage_pictures_view'>
+          <text id='1' bindtap='codeImageStatus' class='slippage_pictures_view_text'>拍照</text>
+          <view class='slippage_pictures_img'>
+            <!-- <template is="fork"></template> -->
+            
+            <template is="hook"></template>
+          </view>
+        </view>
+        <!-- 各种按钮 -->
+        <view class='slippage_pictures_buttom'>
+          <view id="{{item.id}}" class='slippage_pictures_buttom_view' bindtap='attenceStatus'>考勤状况</view>
+          <view id='{{item.id}}' bindtap='qrcodeStatus' class='slippage_pictures_buttom_view' style='border-left:1px solid #cccccc;border-right: 1px solid #cccccc;'data-u="'su'">报名二维码</view>
+          <view id='{{item.id}}' bindtap='qrcodeStatus' data-u="'u'" class='slippage_pictures_buttom_view'>签到二维码</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 筛选区 -->
+<block wx:if="{{screeningStatus == 1}}">
+  <include src="./screening/screening.wxml"/>
+</block>
+<!-- 考勤区 -->
+<block wx:if="{{attenceStatus}}">
+  <include src="./attence/attence.wxml"/>
+</block>
+<!-- 二维码 -->
+<block wx:if="{{qrcodeStatus}}">
+  <include src="./qrcode/qrcode.wxml"/>
+</block>
+<!-- 拍照 -->
+<block wx:if="{{codeImageStatus == 1}}"> 
+  <include src="./codeImage/codeImage.wxml"/> 
+</block> 
